@@ -19,7 +19,7 @@ function set_content() {
   if (is_id != 0) {
     document.getElementById("courseid").value = is_id
   }
-}
+} 
 
 export default function Home() {
     useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
         
         <div className="flex justify-center items-center flex-col m-5">
           
-          <div className="border-1 w-100 flex flex-col">
+          <div className="border-3 w-100 flex flex-col">
 
             <h1 className="text-3xl m-4">Register</h1>
             <input className="m-4 p-2" type="text" placeholder="First name" />
