@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Link from "next/link";
 
 export default function Document() {
   return (
@@ -6,25 +7,21 @@ export default function Document() {
       <Head />
       <title>Tresham college 2025 open day |</title>
       <body className="antialiased">
-      <div class="bg-[#143c71]/20 backdrop-blur-md shadow-md text-black flex justify-between h-16 items-center mx-auto px-6">
-        <ul class="flex justify-center gap-4 mx-auto">
-          <li>
-            <a href="about" class="font-bold bg-[#668dc0]/30 px-4 py-2 rounded-lg hover:bg-gray-600 hover:scale-105 transition">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="contact" class="font-bold bg-[#668dc0]/30 px-4 py-2 rounded-lg hover:bg-gray-600 hover:scale-105 transition">
-              Contact
-            </a>
-          </li>
-          <li>
-            <a href="register" class="font-bold bg-[#668dc0]/30 px-4 py-2 rounded-lg hover:bg-gray-600 hover:scale-105 transition">
-              Register
-            </a>
-          </li>
-        </ul>
-      </div>
+        <nav className="bg-[#143c71] p-3 ">
+        <div className="flex justify-between items-center">
+            <Link href="/">
+            <div className="flex items-center gap-x-3">
+                <img className="w-20" src="logo-colour.png" />
+            </div>
+            </Link>
+          <div className="flex gap-x-4">
+            <Link className="text-white underline hover:translate-y-1 p-2" href="/about">About</Link>
+            <Link className="text-white underline hover:translate-y-1 p-2" href="/contact">Contact</Link>
+            <Link className="text-white underline hover:translate-y-1 p-2" href="/register">Register</Link>
+
+          </div>
+        </div>
+      </nav>
 
         <Main />
         <NextScript />
